@@ -1,0 +1,54 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Ejemplo de como implementar swagger en Golang",
+        "title": "EJEMPLO SWAGGER",
+        "termsOfService": "https://terminosyservicios.com",
+        "contact": {},
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://licencia.com"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost/8080",
+    "paths": {
+        "/albums": {
+            "get": {
+                "description": "Gets all albums without filter",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Albums"
+                ],
+                "summary": "List Albums",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "token",
+                        "name": "token",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/web.response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "web.response": {
+            "type": "object",
+            "properties": {
+                "data": {}
+            }
+        }
+    }
+}
