@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Interstellar",
+        "category": "sci-fi",
+        "rating": 9.2
+    },
+    {
+        "id": 2,
+        "title": "The Conjuring",
+        "category": "horror",
+        "rating": 8.5
+    },
+    {
+        "id": 3,
+        "title": "The Darkest Minds",
+        "category": "adventure",
+        "rating": 7.6
+    }
+]

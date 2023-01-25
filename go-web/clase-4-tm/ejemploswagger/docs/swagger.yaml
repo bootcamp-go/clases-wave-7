@@ -1,0 +1,36 @@
+definitions:
+  web.response:
+    properties:
+      data: {}
+    type: object
+host: localhost/8080
+info:
+  contact: {}
+  description: Ejemplo de como implementar swagger en Golang
+  license:
+    name: Apache 2.0
+    url: http://licencia.com
+  termsOfService: https://terminosyservicios.com
+  title: EJEMPLO SWAGGER
+  version: "1.0"
+paths:
+  /albums:
+    get:
+      description: Gets all albums without filter
+      parameters:
+      - description: token
+        in: header
+        name: token
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/web.response'
+      summary: List Albums
+      tags:
+      - Albums
+swagger: "2.0"
